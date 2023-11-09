@@ -1,0 +1,35 @@
+button.mat-button {
+
+    padding: 10px 20px; /* Padding around the button text */
+    border: none; /* No border */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underlining */
+    display: inline-block;
+    font-size: 16px; /* Font size */
+    margin: 4px 2px; /* Margin around the button */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 8px; /* Rounded corners */
+  }
+
+  /* CSS for the icon */
+  mat-icon {
+    vertical-align: middle; /* Align the icon vertically with text */
+    margin-right: 5px; /* Space between icon and text */
+  }
+
+  /* CSS for the menu items */
+  button.mat-menu-item {
+    color: #333; /* Color for menu items */
+    padding: 8px 20px; /* Padding for menu items */
+    display: block; /* Display as block elements */
+    width: 100%; /* Full width for menu items */
+    text-align: left; /* Align text to the left */
+  }
+mat-card
+{
+    background-color: rgb(164, 221, 202);
+} 
+button.mat-menu-item :hover{
+
+    background-color: white;
+}

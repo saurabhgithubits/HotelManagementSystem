@@ -1,0 +1,40 @@
+<div id="mySidenavRight" class="sidenav">
+    <a href="manager/getRoom" id="addguestRight">View RoomDetails</a>
+  </div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="container text-center">
+                <img src="/assets/ro.png" width="100px" height="100px" alt="">
+            </div>
+            <h1 class="text-center">Update Room</h1>
+            <form #roomForm="ngForm" (ngSubmit)="onSubmit()">
+<!--                
+                <div class="form-group">
+                    <label for=""><b>RoomName</b></label>
+                    <input type="text" required #firstName="ngModel"
+                    [class.is-invalid]="firstName.invalid && firstName.touched" class="form-control" name="firstName" [(ngModel)]="room.roomName">
+                    <small class="text-danger" [class.d-none]="firstName.valid || firstName.untouched">First name require</small>
+                </div> -->
+                <div class="form-group">
+                    <label for=""><b>check_In_date</b></label>
+                    <input type="date" required #lastName="ngModel"
+                    [class.is-invalid]="lastName.invalid && lastName.touched" class="form-control" name="lastName" [(ngModel)]="room.checkInDate">
+                    <small class="text-danger" [class.d-none]="lastName.valid || lastName.untouched">Last name require</small>
+                </div>
+                <div class="form-group">
+                    <label for=""><b>check_Out_date</b></label>
+                    <input type="date" required #pass="ngModel"
+                    [class.is-invalid]="pass.invalid && pass.touched" class="form-control" name="password" [(ngModel)]="room.checkOutDate">
+                    <small class="text-danger" [class.d-none]="pass.valid || pass.untouched">Password name require</small>
+                </div>
+                
+                <div class="form-group" style="margin-top: 20px; text-align:center ;">
+                    <button [disabled]="roomForm.form.invalid" class="btn btn-primary" type="submit">Update Room</button>
+                  
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

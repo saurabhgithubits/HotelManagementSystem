@@ -1,0 +1,30 @@
+<h2 style="text-align: center;"> Staff List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <!-- <th> Id </th> -->
+            <th> Name</th>
+            <th> Address </th>
+            <th> Email </th>
+            <th> Salary </th>
+            <th> Occupation </th>
+            <th> Action </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let Staff of Staffs" >
+            <!-- <td> {{ Staff.id }} </td> -->
+            <td> {{ Staff.name }} </td>
+            <td> {{ Staff.address }} </td>
+            <td> {{ Staff.email }} </td>
+            <td> {{ Staff.salary }} </td>
+            <td> {{ Staff.occupation }} </td>
+            
+            <td>
+                <button (click) = "updateStaff(Staff.id)" class = "btn btn-info">Update</button>
+                <button (click) = "deleteStaff(Staff.id)" class = "btn btn-danger" style="margin-left: 10px">Delete</button> 
+                <button (click) = "StaffDetails(Staff.id)" class = "btn btn-info" style="margin-left: 10px"> View</button> 
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,30 @@
+#mySidenavRight {
+    position: fixed;
+    right: -80px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s;
+    z-index: 9999;
+}
+
+#mySidenavRight a {
+    position: relative;
+    left: auto;
+    right: -80px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px 0 0 5px;
+}
+
+#mySidenavRight a:hover {
+    right: 0;
+}
+
+#addguestRight {
+    top: 60px;
+    background-color: #88b013;
+}

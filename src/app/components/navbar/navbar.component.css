@@ -1,0 +1,31 @@
+nav ul li{
+    margin-left: 50px;
+  }
+  .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Style the navigation links */
+  .navbar-nav .nav-link {
+    margin: 0 10px;
+  }
+  
+  /* Style the active link */
+  .navbar-nav .nav-item.active .nav-link {
+    color: #ffffff; /* Change the active link color */
+    background-color: #007bff; /* Change the active link background color */
+    border-radius: 5px;
+    padding: 5px 15px;
+  }
+  
+
+  .navbar-toggler-icon {
+    background-color: #ffffff;
+  }
+  
+  /* Optional: Customize the Navbar background color */
+  .navbar {
+    background-color: #a2c4d1;
+  }
+

@@ -1,0 +1,32 @@
+<h2 style="text-align: center;"> Guest List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <!-- <th>Id</th> -->
+            <th>MemberCode</th>
+            <th>PhoNo</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Email</th>
+            <th>Company</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let guest of guests" >
+            <!-- <td> {{ guest.id }} </td> -->
+            <td> {{ guest.memberCode }} </td>
+            <td> {{ guest.phoneNumber }} </td>
+            <td> {{ guest.name }} </td>
+            <td> {{ guest.gender}} </td>
+            <td> {{ guest.email}} </td>
+            <td> {{ guest.company}} </td>
+            <td> {{ guest.address}} </td>
+            <td>
+                <button (click) = "updateGuest(guest.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteGuest(guest.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "guestDetails(guest.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

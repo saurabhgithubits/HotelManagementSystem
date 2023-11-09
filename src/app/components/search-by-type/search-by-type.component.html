@@ -1,0 +1,47 @@
+<div class="container">
+    <form [formGroup]="search" (ngSubmit)="searchRooms()">
+        <div class="row">
+            <!-- Room From Field -->
+            
+            <!-- Room To Field -->
+            <div class="col-md-4 mb-3">
+                <label for="roomType" class="form-label"><b>Enter Room Type</b></label>
+                <input type="text" formControlName="roomType" id="roomType" class="form-control" placeholder="Enter Room To" />
+                <div *ngIf="search.get('roomType')?.invalid && search.get('roomType')?.touched" class="error-message">
+                    <span *ngIf="search.get('roomType')?.hasError('required')">Room To is required</span>
+                     </div>
+            </div>
+            <div class="col-md-2 mb-3">
+              <button mat-raised-button color="primary" type="submit">
+                  <mat-icon>search</mat-icon> Search Rooms
+              </button>
+          </div>
+        </div>
+    </form>
+  </div>
+  
+  <div class="container1">
+    <h4 style="text-align: center;">Available Room</h4>
+    <table class="table text-center">
+      <thead>
+        <tr>
+          <th>Room Type:    </th>
+          <th>check_in_date:    </th>
+          <th>check_out_date:    </th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of datasource">
+          <td>{{ row.roomType }}</td>
+          <td>{{ row.checkInDate }}</td>
+          <td>{{ row.checkOutDate }}</td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div *ngIf="datasource.length === 0">
+    <p>No rooms found for the given search criteria.</p>
+  </div>

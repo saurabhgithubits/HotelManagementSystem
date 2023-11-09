@@ -1,0 +1,73 @@
+<div id="mySidenavRight" class="sidenav">
+    <a href="user/viewList" id="addguestRight">View Guest</a>
+  </div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="container text-center">
+                <img src="/assets/g.png" width="100px" height="100px" alt="">
+            </div>
+            <h1 class="text-center">Update Guest Info</h1>
+            <form #userForm="ngForm" (ngSubmit)="onSubmit()">
+                <!-- <div class="form-group">
+                    <label for=""><b>User Name</b></label>
+                    <input type="text" required #userName="ngModel"
+                    [class.is-invalid]="userName.invalid && userName.touched" class="form-control" name="userName" [(ngModel)]="user.username">
+                    <small class="text-danger" [class.d-none]="userName.valid || userName.untouched">User name require</small>
+                </div> -->
+                <div class="form-group">
+                    <label for=""><b> Name</b></label>
+                    <input type="text" required #firstName="ngModel"
+                    [class.is-invalid]="firstName.invalid && firstName.touched" class="form-control" name="firstName" [(ngModel)]="guest.name">
+                    <small class="text-danger" [class.d-none]="firstName.valid || firstName.untouched">Name require</small>
+                </div>
+                <div class="form-group">
+                    <label for=""><b>Phone Number</b></label>
+                    <input type="text" required #lastName="ngModel"
+                    [class.is-invalid]="lastName.invalid && lastName.touched" class="form-control" name="lastName" [(ngModel)]="guest.phoneNumber">
+                    <small class="text-danger" [class.d-none]="lastName.valid || lastName.untouched">Phone number require</small>
+                </div>
+                <div class="form-group">
+                    <label for=""><b>Gender</b></label>
+                    <input type="text" required #pass="ngModel"
+                    [class.is-invalid]="pass.invalid && pass.touched" class="form-control" name="password" [(ngModel)]="guest.gender">
+                    <small class="text-danger" [class.d-none]="pass.valid || pass.untouched">Gender require</small>
+                </div>
+                <div class="form-group">
+                    <label for=""><b>Email</b></label>
+                    <input type="text" required #Email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    [class.is-invalid]="Email.invalid && Email.touched" class="form-control" name="Email" [(ngModel)]="guest.email">
+                    <small class="text-danger" [class.d-none]="Email.valid || Email.untouched">Email require</small>
+                </div>
+                <div class="form-group">
+                    <label for=""><b>Company</b></label>
+                    <input type="text" required #Email="ngModel"
+                    [class.is-invalid]="Email.invalid && Email.touched" class="form-control" name="Email" [(ngModel)]="guest.company">
+                    <small class="text-danger" [class.d-none]="Email.valid || Email.untouched">Enter company name</small>
+                </div>
+                 <!-- <div class="form-group">
+                    <label for="dropdown"><b>Role</b></label>
+                    <select id="dropdown" required #role="ngModel"
+                    [class.is-invalid]="role.invalid && role.touched" class="form-control" name="role" [(ngModel)]="user.role">
+                        
+                        <option value="option2"></option>
+                        <option value="option3">MANAGER</option>
+                        <option value="option4">RECEPTIONIST</option>
+                    </select>
+                    <small class="text-danger" [class.d-none]="role.valid || role.untouched">Role is require</small>
+                </div>                -->
+                <div class="form-group">
+                    <label for=""><b>Address</b></label>
+                    <input type="text" required #address="ngModel"
+                    [class.is-invalid]="address.invalid && address.touched" class="form-control" name="address" [(ngModel)]="guest.address">
+                    <small class="text-danger" [class.d-none]="address.valid || address.untouched">Address name require</small>
+                </div>
+                <div class="form-group" style="margin-top: 20px; text-align:center ;">
+                    <button [disabled]="userForm.form.invalid" class="btn btn-primary" type="submit">Update</button>
+                    
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

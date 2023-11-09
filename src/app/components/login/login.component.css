@@ -1,0 +1,26 @@
+.row{
+   
+    margin-left: 55%;   
+    margin-right: 10%;  
+    color: black;
+    width: 50%;
+    height: 15%;
+    border: 1px solid lightgray;
+    padding: 5%;
+    border-radius: 5px;
+    box-shadow: 2px 8px 10px 10px rgb(74, 67, 67); 
+}
+
+h1{
+    text-align: center;
+    color: rgb(35, 35, 36);
+}
+.container{  
+    background-image: url('/assets/be.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+} 
+p{
+    color: rgb(146, 192, 232);
+}  

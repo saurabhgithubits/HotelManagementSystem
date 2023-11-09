@@ -1,0 +1,43 @@
+
+<mat-card>
+    <mat-action-list>
+      <div mat-subheader><strong>{{user.role}}</strong></div>
+     
+      <button mat-list-item routerLink="/manager/newHome">
+        <mat-icon mat-list-icon><span class="material-symbols-outlined">
+          home
+          </span>HOME</mat-icon>
+      </button>
+      <!-- <button mat-list-item routerLink="/manager/contact">
+        <mat-icon mat-list-icon><span class="material-symbols-outlined">
+          contact_phone
+          </span></mat-icon>Contact_Us
+      </button>
+      <button mat-list-item routerLink="/manager/about">
+        <mat-icon mat-list-icon><span class="material-symbols-outlined">
+          sticky_note_2
+          </span></mat-icon>About_Us
+      </button> -->
+       <button mat-list-item routerLink="/manager/profile">
+        <mat-icon mat-list-icon>account_circle</mat-icon> Dashboard
+     </button> 
+      <!-- <button mat-list-item routerLink="/manager/get">
+        <mat-icon mat-list-icon>admin_panel_settings</mat-icon> View Staff
+      </button> -->
+      <button mat-list-item routerLink="/manager/add">
+        <mat-icon mat-list-icon>add</mat-icon> Add Staff
+      </button>
+      <button mat-list-item routerLink="/manager/addRoom">
+        <mat-icon mat-list-icon>add_circle</mat-icon> Add Room
+      </button>
+      <button mat-list-item routerLink="/manager/getRoom">
+        <mat-icon mat-list-icon>add_box</mat-icon>View Room
+      </button>
+      <!-- <button mat-list-item routerLink="/manager/paymentList">
+        <mat-icon mat-list-icon>payment</mat-icon>paymentList
+      </button> -->
+      <button (click)="logout()" mat-list-item>
+        <mat-icon mat-list-icon>logout</mat-icon> Logout
+      </button>
+    </mat-action-list>
+  </mat-card>

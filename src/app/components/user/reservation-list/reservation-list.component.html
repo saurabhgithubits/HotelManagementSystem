@@ -1,0 +1,63 @@
+<!-- <div class="container">
+    <form [formGroup]="search" (ngSubmit)="searchRooms()">
+        <div class="row"> 
+        Room From Field 
+            
+         Room To Field 
+            <div class="col-md-4 mb-3">
+                <label for="roomType" class="form-label"><b>Enter Room Type</b></label>
+                <input type="text" formControlName="roomType" id="roomType" class="form-control" placeholder="Enter Room To" />
+                <div *ngIf="search.get('roomType')?.invalid && search.get('roomType')?.touched" class="error-message">
+                    <span *ngIf="search.get('roomType')?.hasError('required')">Name is required</span>
+                     </div>
+            </div>
+            <div class="col-md-2 mb-3">
+              <button mat-raised-button color="primary" type="submit" routerLink="/searchByName">
+                  <mat-icon>search</mat-icon> Search Rooms
+              </button>
+          </div>
+        </div>
+    </form>
+  </div>-->
+
+
+<h2 style="text-align: center;"> Reserve List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+             <!-- <th> Id</th>  -->
+            <th> First Name</th>
+            <th> NoOfAdult</th>
+            <th> NoOfchild</th>
+            <th> checkIndate</th>
+            <th> checkOutdate</th>            
+            <th> NoOfNight</th>
+            <!-- <th> Status </th>        -->
+            <th> Action</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let reserve of reserves" >
+             <!-- <td> {{ reserve.id }} </td>  -->
+            <td> {{ reserve.firstName }} </td>
+            <td> {{ reserve.no_of_Adult }} </td>
+            <td> {{ reserve.no_of_child }} </td>
+            <td> {{ reserve.check_in_date }} </td>
+            <td> {{ reserve.checkout_date}} </td>            
+            <td> {{ reserve.noOfNights}} </td>
+            <!-- <td> {{ reserve.status}} </td> -->
+            
+            <td>
+                <button (click) = "updateReserve(reserve.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteReserve(reserve.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                 <button (click) = "ReserveDetails(reserve.id)" class = "btn btn-info" style="margin-left: 10px"> View</button> 
+                 <!-- <button  class="btn btn-primary" type="submit" routerLink="pay">Checkout</button> -->
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div *ngIf="reserves.length === 0">
+    <p>No Reservation found at that moment.</p>
+  </div>

@@ -1,0 +1,25 @@
+<h2 style="text-align: center;"> Room List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <!-- <th>Id</th> -->
+            <th>RoomType</th>
+            <th>check_In_date</th>
+            <th>check_Out_date</th>
+            <th>Action Buttons</th>
+        </tr>
+    </thead>
+    <tbody> 
+        <tr *ngFor = "let room of rooms" >
+            <!-- <td> {{ room.id }} </td> -->
+            <td> {{ room.roomType }} </td>
+            <td> {{ room.checkInDate }} </td>
+            <td> {{ room.checkOutDate }} </td>
+            <td>
+                <button (click) = "updateRoom(room.id)" class = "btn btn-info"> Update</button>
+                <!-- <button (click) = "deleteGuest(guest.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button> -->
+                <button (click) = "guestDetails(room.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

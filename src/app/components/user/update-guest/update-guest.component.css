@@ -1,0 +1,31 @@
+/* Style for the right side button */
+#mySidenavRight {
+    position: fixed;
+    right: -80px;
+    top: 50%; /* Adjust as needed */
+    transform: translateY(-50%);
+    transition: 0.3s;
+    z-index: 9999;
+}
+
+#mySidenavRight a {
+    position: relative;
+    left: auto;
+    right: -80px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 250px; /* Adjust width as needed */
+    text-decoration: none;
+    font-size: 18px; /* Adjust font size as needed */
+    color: white;
+    background-color: #88b013; /* Button background color */
+    border-radius: 5px; /* Rounded corners */
+    display: block; /* Make it a block-level element */
+    text-align: center; /* Center the text */
+    margin-bottom: 10px; /* Adjust margin as needed */
+}
+
+#mySidenavRight a:hover {
+    right: 0;
+    background-color: #6d8e0a; /* Change color on hover */
+}

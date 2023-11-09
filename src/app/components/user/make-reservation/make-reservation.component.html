@@ -1,0 +1,82 @@
+<div id="mySidenavRight" class="sidenav">
+    <a href="user/viewReserve" id="addguestRight">View Reservation</a>
+  </div>
+  
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="container text-center">
+                <img src="/assets/re.png" width="100px" height="100px" alt="">
+            </div>
+            <h1 class="text-center">Reservation</h1>
+            <form #reserveForm="ngForm" (ngSubmit)="saveReserve()">
+                <div class="form-group">
+                    <label for=""><b>Name</b></label>
+                    <input type="text" required #pass="ngModel"
+                    [class.is-invalid]="pass.invalid && pass.touched" class="form-control" name="password" [(ngModel)]="reserve.firstName">
+                    <small class="text-danger" [class.d-none]="pass.valid || pass.untouched">firstName require</small>
+                </div>
+
+                <div class="form-group">
+                    <label for=""><b>Number of nights</b></label>
+                    <input type="number" required #Email="ngModel"
+                    [class.is-invalid]="Email.invalid && Email.touched" class="form-control" name="Email" [(ngModel)]="reserve.noOfNights">
+                    <small class="text-danger" [class.d-none]="Email.valid || Email.untouched">Enter the number of child</small>
+                </div>
+                <div class="form-group">
+                    <label for=""><b>No of Adult</b></label>
+                    <input type="number" required #firstName="ngModel"
+                    [class.is-invalid]="firstName.invalid && firstName.touched" class="form-control" name="firstName" [(ngModel)]="reserve.no_of_Adult">
+                    <small class="text-danger" [class.d-none]="firstName.valid || firstName.untouched">First name require</small>
+                </div>
+                <div class="form-group">
+                    <label for=""><b>No of child</b></label>
+                    <input type="number" required #lastName="ngModel"
+                    [class.is-invalid]="lastName.invalid && lastName.touched" class="form-control" name="lastName" [(ngModel)]="reserve.no_of_child">
+                    <small class="text-danger" [class.d-none]="lastName.valid || lastName.untouched">Last name require</small>
+                </div>
+                <div class="form-group">
+                    <label for=""><b>check_In_date</b></label>
+                    <input type="date" required #pass="ngModel"
+                    [class.is-invalid]="pass.invalid && pass.touched" class="form-control" name="password" [(ngModel)]="reserve.check_in_date">
+                    <small class="text-danger" [class.d-none]="pass.valid || pass.untouched">Date require</small>
+                </div>
+                <div class="form-group">
+                    <label for=""><b>Check_out Date</b></label>
+                    <input type="date" required #Email="ngModel"
+                    [class.is-invalid]="Email.invalid && Email.touched" class="form-control" name="Email" [(ngModel)]="reserve.checkout_date">
+                    <small class="text-danger" [class.d-none]="Email.valid || Email.untouched">Date require</small>
+                </div>
+                <!-- <div class="form-group">
+                    <label for=""><b>Status</b></label>
+                    <input type="text" required #pass="ngModel"
+                    [class.is-invalid]="pass.invalid && pass.touched" class="form-control" name="password" [(ngModel)]="reserve.status">
+                    <small class="text-danger" [class.d-none]="pass.valid || pass.untouched">Status require</small>
+                </div> -->
+              
+                 <!-- <div class="form-group">
+                    <label for="dropdown"><b>Role</b></label>
+                    <select id="dropdown" required #role="ngModel"
+                    [class.is-invalid]="role.invalid && role.touched" class="form-control" name="role" [(ngModel)]="reserve.role">
+                        
+                        <option value="option2"></option>
+                        <option value="option3">MANAGER</option>
+                        <option value="option4">RECEPTIONIST</option>
+                    </select>
+                    <small class="text-danger" [class.d-none]="role.valid || role.untouched">Role is require</small>
+                </div>                -->
+                <!--<div class="form-group">
+                    <label for=""><b>Address</b></label>
+                    <input type="text" required #address="ngModel"
+                    [class.is-invalid]="address.invalid && address.touched" class="form-control" name="address" [(ngModel)]="reserve.address">
+                    <small class="text-danger" [class.d-none]="address.valid || address.untouched">Address name require</small>
+                </div> -->
+                <div class="form-group" style="margin-top: 20px; text-align:center ;">
+                    <button [disabled]="reserveForm.form.invalid" class="btn btn-primary" type="submit">Make Reservation</button>
+                    <button type="button" class="btn btn-danger cancel" (click)="goBack()" style="margin-left: 20px;">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

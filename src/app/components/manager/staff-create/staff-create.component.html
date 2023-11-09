@@ -1,0 +1,59 @@
+<div id="mySidenavRight" class="sidenav">
+    <a href="manager/get" id="addguestRight">View Staff</a>
+  </div>
+  
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="container text-center">
+                <img src="/assets/u.png" width="100px" height="100px" alt="">
+            </div>
+            <h1 class="text-center">Add Staff</h1>
+            <form #staffForm="ngForm" (ngSubmit)="saveStaff()">
+ 
+                <!-- <div class="form-group">
+                    <label for=""><b>Staff Id</b></label>
+                    <input type="text" required #address="ngModel"
+                    [class.is-invalid]="address.invalid && address.touched" class="form-control" name="address" [(ngModel)]="staff.id">
+                    <small class="text-danger" [class.d-none]="address.valid || address.untouched">Staff Id require</small>
+                </div> -->
+
+                <div class="form-group">
+                    <label for=""><b>Name</b></label>
+                    <input type="text" required #firstName="ngModel" pattern="[A-Za-z\s\-']{2,50}"
+                    [class.is-invalid]="firstName.invalid && firstName.touched" class="form-control" name="firstName" [(ngModel)]="staff.name">
+                    <small class="text-danger" [class.d-none]="firstName.valid || firstName.untouched"> name require</small>
+                </div>
+                <div class="form-group">
+                    <label for=""><b>Email</b></label>
+                    <input type="email" required #lastName="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    [class.is-invalid]="lastName.invalid && lastName.touched" class="form-control" name="lastName" [(ngModel)]="staff.email">
+                    <small class="text-danger" [class.d-none]="lastName.valid || lastName.untouched">Email require</small>
+                </div>
+                <div class="form-group">
+                    <label for=""><b>Salary</b></label>
+                    <input type="number" required #pass="ngModel"
+                    [class.is-invalid]="pass.invalid && pass.touched" class="form-control" name="password" [(ngModel)]="staff.salary">
+                    <small class="text-danger" [class.d-none]="pass.valid || pass.untouched">Salary require</small>
+                </div>
+                <div class="form-group">
+                    <label for=""><b>Occupation</b></label> 
+                    <input type="text" required #Email="ngModel" pattern="[A-Za-z\s\-']{2,50}"
+                    [class.is-invalid]="Email.invalid && Email.touched" class="form-control" name="Email" [(ngModel)]="staff.occupation">
+                    <small class="text-danger" [class.d-none]="Email.valid || Email.untouched">Occupation must require</small>
+                </div>
+                             
+                <div class="form-group">
+                    <label for=""><b>Address</b></label>
+                    <input type="text" required #address="ngModel"
+                    [class.is-invalid]="address.invalid && address.touched" class="form-control" name="address" [(ngModel)]="staff.address">
+                    <small class="text-danger" [class.d-none]="address.valid || address.untouched">Address name require</small>
+                </div>
+                <div class="form-group" style="margin-top: 20px; text-align:center ;">
+                    <button [disabled]="staffForm.form.invalid" class="btn btn-primary" type="submit">Add Staff</button>
+                    <button type="button" class="btn btn-danger cancel" (click)="goBack()" style="margin-left: 20px;">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

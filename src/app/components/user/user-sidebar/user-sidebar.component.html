@@ -1,0 +1,54 @@
+<mat-card>
+    <mat-action-list>
+      <div mat-subheader><strong>{{user.role}}</strong></div>
+      
+      <button mat-list-item routerLink="/user/newHome">
+        <mat-icon mat-list-icon><span class="material-symbols-outlined">
+          home
+          </span>HOME</mat-icon>
+      </button>
+      <button mat-list-item routerLink="/user/contact">
+        <mat-icon mat-list-icon><span class="material-symbols-outlined">
+          contact_phone
+          </span></mat-icon>Contact_Us
+      </button>
+      <button mat-list-item routerLink="/user/about">
+        <mat-icon mat-list-icon><span class="material-symbols-outlined">
+          sticky_note_2
+          </span></mat-icon>About_Us
+      </button>
+      <button mat-list-item routerLink="/user/profile">
+        <mat-icon mat-list-icon>account_circle</mat-icon> Dashboard
+      </button>
+  
+      <button mat-list-item routerLink="/user/addGuest">
+        <mat-icon mat-list-icon>add_circle</mat-icon> Add Guest
+      </button>
+      <!-- <button mat-list-item routerLink="/user/viewList">
+        <mat-icon mat-list-icon>view_list</mat-icon>View Guest
+      </button> -->
+      <button mat-button [matMenuTriggerFor]="menu"><mat-icon>add_circle</mat-icon>Search Rooms</button>
+     
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/user/search">
+       <mat-icon>search</mat-icon> Search Room By Date
+      </button>
+      <button mat-menu-item routerLink="/user/searchByType">
+       <mat-icon>search</mat-icon> Search Room By roomType
+      </button>
+    </mat-menu>
+
+      <button mat-list-item routerLink="/user/addReserve">
+        <mat-icon mat-list-icon>add_circle</mat-icon>Make Reservation
+      </button>
+      <!-- <button mat-list-item routerLink="/user/viewReserve">
+        <mat-icon mat-list-icon>view_list</mat-icon>View Reservation
+      </button> -->
+      <button mat-list-item routerLink="/user/pay">
+        <mat-icon mat-list-icon>currency_rupee</mat-icon>pay
+      </button>
+      <button mat-list-item (click)="logout()" >
+        <mat-icon mat-list-icon>logout</mat-icon>Logout
+      </button>
+    </mat-action-list>
+  </mat-card>
