@@ -1,0 +1,14 @@
+name: demo pipeline
+
+on:
+  push:
+    branches:
+      - feature/**
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: printing
+        run: |
+          echo "Welcome Saurabh"
