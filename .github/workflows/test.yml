@@ -5,10 +5,17 @@ on:
     branches:
       - feature/**
 
+  workflow_dispatch:
+    inputs:
+      name:
+        type: string
+        default: Saurabh
+        description: 'Name parameter'
+
 jobs:
   demo:
     runs-on: ubuntu-latest
     steps:
       - name: printing
         run: |
-          echo "Welcome Saurabh"
+          echo "Welcome ${{inputs.name}}"
