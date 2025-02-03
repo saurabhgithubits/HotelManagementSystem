@@ -1,0 +1,21 @@
+name: demo pipeline
+
+on:
+  push:
+    branches:
+      - feature/**
+
+  workflow_dispatch:
+    inputs:
+      name:
+        type: string
+        default: Saurabh
+        description: 'Name parameter'
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: printing
+        run: |
+          echo "Welcome ${{inputs.name}}"
