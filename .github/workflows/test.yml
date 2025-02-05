@@ -11,11 +11,18 @@ on:
         type: string
         default: Saurabh
         description: 'Name parameter'
-
+env:
+  name: Ram
 jobs:
   demo:
     runs-on: ubuntu-latest
     steps:
-      - name: printing
+      - name: Initialize
+        if: ${{inputs.name}} == ''
+        run: |
+          echo "Initializing values"
+          echo "env.name=${{inputs.name}}" >> $GITHUB_OUTPUT
+
+      - name: Printing Name
         run: |
           echo "Welcome ${{inputs.name}}"
