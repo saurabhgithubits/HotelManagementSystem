@@ -21,7 +21,7 @@ jobs:
         if: ${{inputs.name}} == ''
         run: |
           echo "Initializing values"
-          echo "${{env.name}}=${{inputs.name}}" >> $GITHUB_OUTPUT
+          echo "${{inputs.name}}" >> $GITHUB_OUTPUT
 
       - name: Printing Name
         run: |
